@@ -1,0 +1,2 @@
+# PatternForJavaAndAndroid
+Java常用设计模式举例
