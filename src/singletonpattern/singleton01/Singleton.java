@@ -1,7 +1,7 @@
 package singletonpattern.singleton01;
 
 /**
- * 单例设计模式
+ * 单例设计模式  http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/
  * 饿汉式单例  线程安全
  * 这种方法非常简单，因为单例的实例被声明成 static 和 final 变量了，
  * 在第一次加载类到内存中时就会初始化，所以创建实例本身是线程安全的。
