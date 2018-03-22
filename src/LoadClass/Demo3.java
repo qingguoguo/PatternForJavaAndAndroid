@@ -34,9 +34,9 @@ public class Demo3 {
             System.out.println(method);
         }
 
-        Method setScore = studentClass.getDeclaredMethod("setScore",int.class);
+        Method setScore = studentClass.getDeclaredMethod("setScore", int.class);
         setScore.setAccessible(true);
-        setScore.invoke(student,999);
+        setScore.invoke(student, 999);
         System.out.println(student);
         System.out.println(setScore.getReturnType());
         System.out.println(setScore.getGenericReturnType());
