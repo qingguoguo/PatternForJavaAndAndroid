@@ -1,4 +1,4 @@
-package singletonpattern.singleton01;
+package patternsingleton.singleton01;
 
 /**
  * 单例设计模式  http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/

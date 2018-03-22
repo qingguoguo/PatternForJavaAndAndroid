@@ -1,4 +1,4 @@
-import singletonpattern.singleton03.SingletonTest;
+import patternsingleton.singleton03.SingletonTest;
 
 public class MainDemo extends Thread {
     @Override

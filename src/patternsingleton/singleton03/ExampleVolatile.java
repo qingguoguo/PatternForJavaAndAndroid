@@ -1,4 +1,4 @@
-package singletonpattern.singleton03;
+package patternsingleton.singleton03;
 
 /**
  * 可以看出 加volatile关键字标识变量可见性的作用

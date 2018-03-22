@@ -1,4 +1,4 @@
-package singletonpattern.singleton03;
+package patternsingleton.singleton03;
 
 public class SingletonTest {
     private volatile static SingletonTest instance;

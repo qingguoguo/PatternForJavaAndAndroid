@@ -1,4 +1,4 @@
-package singletonpattern.singleton04;
+package patternsingleton.singleton04;
 
 /**
  * 单例设计模式
