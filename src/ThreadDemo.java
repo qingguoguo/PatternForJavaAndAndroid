@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 public class ThreadDemo {
     public static void main(String args[]) throws InterruptedException {
 //        Thread thread = new Thread() {
@@ -64,13 +68,24 @@ public class ThreadDemo {
         //线程礼让 暂停当前正在执行的线程对象，并执行其他线程
         thread1.yield();
         thread1.getThreadGroup();
+
+        System.out.println(~Integer.MAX_VALUE);
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(0x3 << 30);
+        System.out.println(Integer.MAX_VALUE >> 1);
+        System.out.println(Integer.MAX_VALUE >> 2);
+        float i = (3000f / 4000)*270 ;
+        System.out.println(i);
+        System.out.println(8 >> 3);//右移运算符，相当于除以2的3次方
+        System.out.println(8 << 3);//左移运算符，相当乘以2的3次方
     }
 }
- class MyRunnable implements Runnable{
+
+class MyRunnable implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 5; i++) {
-            System.out.println(Thread.currentThread().getName()+":"+i);
+            System.out.println(Thread.currentThread().getName() + ":" + i);
         }
     }
 }
