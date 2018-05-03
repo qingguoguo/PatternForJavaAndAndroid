@@ -1,4 +1,4 @@
-package DemoForEnum;
+package enumdemo;
 
 /**
  * 有时候，我们可能需要对一组数据进行分类，

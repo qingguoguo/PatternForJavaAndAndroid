@@ -1,4 +1,4 @@
-package LoadClass;
+package Classloader;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;

@@ -1,4 +1,4 @@
-package LoadClass;
+package Classloader;
 
 public class Student extends Person {
     public String desc;

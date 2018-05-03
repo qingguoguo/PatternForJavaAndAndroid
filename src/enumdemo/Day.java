@@ -1,4 +1,4 @@
-package DemoForEnum;
+package enumdemo;
 
 /**
  * 枚举类型 http://blog.csdn.net/javazejian/article/details/71333103

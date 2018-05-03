@@ -1,4 +1,4 @@
-package DemoForEnum;
+package enumdemo;
 
 import java.util.Arrays;
 

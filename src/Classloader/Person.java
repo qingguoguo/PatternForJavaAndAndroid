@@ -1,4 +1,4 @@
-package LoadClass;
+package Classloader;
 
 public class Person {
     public int age;

@@ -1,4 +1,4 @@
-package DemoForEnum;
+package enumdemo;
 
 /**
  * 使用switch进行条件判断时，条件参数一般只能是整型，字符型。

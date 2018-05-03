@@ -1,4 +1,4 @@
-package DemoForEnum;
+package enumdemo;
 
 /**
  * 由于java单继承的原因，enum类并不能再继承其他类

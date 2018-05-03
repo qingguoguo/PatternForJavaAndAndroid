@@ -1,4 +1,4 @@
-package LoadClass;
+package Classloader;
 
 /**
  * 获取Class对象引用的方式3种，
@@ -69,11 +69,11 @@ public class Demo1<T> {
         new Candy();
         System.out.println("After creating Candy");
         try {
-            Class.forName("LoadClass.Gum");
+            Class.forName("Classloader.Gum");
         } catch (ClassNotFoundException e) {
             System.out.println("Couldn't find Gum");
         }
-        System.out.println("After Class.forName(\"LoadClass.Gum\")");
+        System.out.println("After Class.forName(\"Classloader.Gum\")");
         new Cookie();
         System.out.println("After creating Cookie");
         System.out.println(int.class);

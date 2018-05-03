@@ -1,10 +1,9 @@
-import patternbuilder.MacBook;
 import patternsingleton.singleton03.SingletonTest;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
-public class MainDemo extends Thread {
+public class ReflectDemo extends Thread {
     @Override
     public void run() {
         try {
@@ -16,9 +15,9 @@ public class MainDemo extends Thread {
     }
 
     public static void main(String[] args) {
-        MainDemo[] mts = new MainDemo[100];
+        ReflectDemo[] mts = new ReflectDemo[100];
         for (int i = 0; i < mts.length; i++) {
-            mts[i] = new MainDemo();
+            mts[i] = new ReflectDemo();
         }
 
 //        for (int j = 0; j < mts.length; j++) {

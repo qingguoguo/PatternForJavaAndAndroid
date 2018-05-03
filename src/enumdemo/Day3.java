@@ -1,4 +1,4 @@
-package DemoForEnum;
+package enumdemo;
 
 /**
  * enum类允许我们为其定义抽象方法，

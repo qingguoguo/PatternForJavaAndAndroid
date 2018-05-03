@@ -1,4 +1,4 @@
-package DemoForEnum;
+package enumdemo;
 
 /**
  * 即使重写了构造方法，仍然无法手动调用构造函数创建枚举实例，只能由编译器执行
