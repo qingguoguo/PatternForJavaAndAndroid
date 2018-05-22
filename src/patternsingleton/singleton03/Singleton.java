@@ -3,6 +3,8 @@ package patternsingleton.singleton03;
 /**
  * 单例设计模式
  * 懒汉式单例   双重查锁机制
+ * http://blog.csdn.net/cselmu9/article/details/51366946
+ *
  * volatile 关键字的作用1.可见性 2.禁止指令重排序优化
  *
  * 但是这里用到的是 禁止指令重排序优化

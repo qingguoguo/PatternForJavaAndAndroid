@@ -13,6 +13,11 @@ public class Singleton {
 
     public static Singleton getInstance() {
         if (instance == null) {
+//            try {
+//                Thread.sleep(300);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
             instance = new Singleton();
         }
         return instance;
