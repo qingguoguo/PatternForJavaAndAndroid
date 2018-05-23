@@ -1,5 +1,7 @@
 package patternsingleton.singleton04;
 
+import java.util.Stack;
+
 /**
  * 单例设计模式
  * 静态内部类单例实现
