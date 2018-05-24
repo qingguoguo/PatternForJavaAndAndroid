@@ -16,6 +16,6 @@ public class Person implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        System.out.println(name + "收到了" + o + "更新:" + ((Person)arg).name);
+        System.out.println(name + " 收到了 " + o + " 更新:" + arg);
     }
 }

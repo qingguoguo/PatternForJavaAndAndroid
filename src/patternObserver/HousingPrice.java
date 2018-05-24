@@ -7,8 +7,8 @@ import java.util.Observable;
  */
 public class HousingPrice extends Observable{
 
-    @Override
-    protected synchronized void setChanged() {
-        super.setChanged();
+    public void setPrice(String price){
+        setChanged();
+        notifyObservers(price);
     }
 }

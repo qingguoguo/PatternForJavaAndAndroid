@@ -14,12 +14,11 @@ public class TestDemo {
         housingPrice.addObserver(person2);
         housingPrice.addObserver(person3);
 
-        housingPrice.setChanged();
+        housingPrice.setPrice("每平米上涨了30");
+
 //        马六收到了patternObserver.HousingPrice@4554617c更新:null
 //        王五收到了patternObserver.HousingPrice@4554617c更新:null
 //        李四收到了patternObserver.HousingPrice@4554617c更新:null
 //        张三收到了patternObserver.HousingPrice@4554617c更新:null
-       // housingPrice.notifyObservers();
-       housingPrice.notifyObservers(person);
     }
 }
