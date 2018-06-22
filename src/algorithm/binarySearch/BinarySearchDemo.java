@@ -8,12 +8,13 @@ public class BinarySearchDemo {
     public static void main(String[] args) {
         int[] arr = {6, 12, 33, 87, 90, 97, 108, 561};
 
-
         System.out.println("循环查找：" + (binarySearch(arr, 108)));
         System.out.println("递归查找：" + binarySearch(arr, 87, 0, arr.length - 1));
     }
 
-    //递归实现二分查找
+    /**
+     * 递归实现二分查找
+     */
     public static int binarySearch(int[] dataset, int data, int beginIndex, int endIndex) {
         int midIndex = (beginIndex + endIndex) / 2;
         if (data < dataset[beginIndex] || data > dataset[endIndex] || beginIndex > endIndex) {
