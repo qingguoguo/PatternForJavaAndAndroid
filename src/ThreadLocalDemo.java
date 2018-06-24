@@ -1,5 +1,8 @@
 import algorithm.innerclass.InnerClassDemo;
 
+/**
+ * 深入分析 ThreadLocal 内存泄漏问题:https://blog.csdn.net/wudiyong22/article/details/52141608
+ */
 public class ThreadLocalDemo {
     ThreadLocal<Long> longLocal = new ThreadLocal<Long>();
     ThreadLocal<String> stringLocal = new ThreadLocal<String>();
@@ -25,12 +28,14 @@ public class ThreadLocalDemo {
         System.out.println(test.getLong());
         System.out.println(test.getString());
         System.out.println("***************************");
-        Thread thread1 = new Thread(){
+        Thread thread1 = new Thread() {
             public void run() {
                 test.set();
                 System.out.println(test.getLong());
                 System.out.println(test.getString());
-            };
+            }
+
+            ;
         };
         thread1.start();
         thread1.join();
