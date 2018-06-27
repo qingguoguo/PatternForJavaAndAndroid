@@ -1,46 +1,40 @@
 import algorithm.innerclass.InnerClassDemo;
 
+import java.util.concurrent.*;
+
 /**
  * 深入分析 ThreadLocal 内存泄漏问题:https://blog.csdn.net/wudiyong22/article/details/52141608
  */
-public class ThreadLocalDemo {
-    ThreadLocal<Long> longLocal = new ThreadLocal<Long>();
-    ThreadLocal<String> stringLocal = new ThreadLocal<String>();
+public class ThreadLocalDemo implements Runnable {
 
 
-    public void set() {
-        longLocal.set(Thread.currentThread().getId());
-        stringLocal.set(Thread.currentThread().getName());
+    public String name;
+
+    public ThreadLocalDemo(String name) {
+        this.name = name;
     }
 
-    public long getLong() {
-        return longLocal.get();
+    @Override
+    public void run() {
+        System.out.println(Thread.currentThread().getName()+" "+name);
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
     }
 
-    public String getString() {
-        return stringLocal.get();
-    }
+    public static void main(String[] args) {
+        //BlockingQueue<Runnable> workQueue = new ArrayBlockingQueue<>(10);
+        ExecutorService threadPool = Executors.newScheduledThreadPool(3);
+        threadPool.execute(new ThreadLocalDemo("任务1"));
+        threadPool.execute(new ThreadLocalDemo("任务2"));
+        threadPool.execute(new ThreadLocalDemo("任务3"));
+        threadPool.execute(new ThreadLocalDemo("任务4"));
+        threadPool.execute(new ThreadLocalDemo("任务5"));
+        threadPool.execute(new ThreadLocalDemo("任务6"));
+        threadPool.shutdown();
 
-    public static void main(String[] args) throws InterruptedException {
-        final ThreadLocalDemo test = new ThreadLocalDemo();
-
-        test.set();
-        System.out.println(test.getLong());
-        System.out.println(test.getString());
-        System.out.println("***************************");
-        Thread thread1 = new Thread() {
-            public void run() {
-                test.set();
-                System.out.println(test.getLong());
-                System.out.println(test.getString());
-            }
-
-            ;
-        };
-        thread1.start();
-        thread1.join();
-        System.out.println("***************************");
-        System.out.println(test.getLong());
-        System.out.println(test.getString());
     }
 }
